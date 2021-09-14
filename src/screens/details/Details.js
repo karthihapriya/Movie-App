@@ -15,10 +15,9 @@ class Details extends React.Component{
     }
   }
   render(){
-    console.log("Iam the PROPS", this.props);
     return (
       <div>
-        <Header />
+        <Header showBtns={true} />
         <div className="back-to-home">
           <BackToHome />
         </div>
@@ -33,7 +32,6 @@ class Details extends React.Component{
             <ArtistDetails movieId={this.state.movieId} />
           </div>
         </div>
-        
       </div>
     )
   }

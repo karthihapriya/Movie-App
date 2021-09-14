@@ -1,6 +1,5 @@
 import Typography from "@material-ui/core/Typography";
 import React from "react";
-import { useParams } from "react-router-dom";
 import YouTube from "react-youtube";
 import moviesData from "../../common/moviesData";
 import "./Details.css";
@@ -11,6 +10,10 @@ class MovieTrailer extends React.Component{
   dateConverter=dateEntry=>{
     let myDate = new Date(dateEntry);
     return myDate.toDateString();
+  }
+  ready = (event) => {
+    // access to player in all event handlers via event.target
+    event.target.pauseVideo();
   }
   render(){
     return(
@@ -54,6 +57,7 @@ class MovieTrailer extends React.Component{
         </Typography>
         <YouTube className="trailer"
           videoId={moviesData[this.props.movieId].trailer_url.split("?v=")[1]}
+          onReady={this.ready}
           id="sY1S34973zA"
         />
       </>
