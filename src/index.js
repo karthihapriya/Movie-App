@@ -5,6 +5,7 @@ import Details from "./screens/details/Details";
 import './index.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import NotFound from './common/NotFound';
+import 'typeface-roboto';
 
 
 ReactDOM.render(
@@ -20,4 +21,3 @@ ReactDOM.render(
 ,
   document.getElementById('root')
 );
-

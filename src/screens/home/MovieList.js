@@ -1,8 +1,8 @@
 import React from "react";
-import ImageList from '@material-ui/core/ImageList';
+import { ImageList } from '@material-ui/core';
 import moviesData from  "../../common/moviesData";
-import ImageListItem from '@material-ui/core/ImageListItem';
-import ImageListItemBar from '@material-ui/core/ImageListItemBar';
+import { ImageListItem } from '@material-ui/core';
+import { ImageListItemBar } from '@material-ui/core';
 import { Link } from "react-router-dom";
 
 class MovieList extends React.Component{
